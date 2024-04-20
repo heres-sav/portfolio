@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "baseUrl": "src",
+    "paths": {
+      "@app": ["./App"],
+      "@rwv": ["./reportWebVitals"],
+      "@assets/*": ["./assets/*"],
+      "@fonts/*": ["./fonts/*"],
+      "@common/*": ["./components/common-co/*"],
+      "@layout/*": ["./components/layout-co/*"]
+    }
+  },
+  "include": ["src"]
+}

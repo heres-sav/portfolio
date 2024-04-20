@@ -1,5 +1,1 @@
-# Hello, I am Souvik Dey
-A full stack web developer bringing you the
-Digital Platform of your dream
-
-## About
+<h3>Fix the need of importing React module to all the jsx files</h3>
