@@ -2,7 +2,7 @@ import React from 'react';
 import { Stack, Typography } from '@mui/material';
 
 export const About = () => {
-  return <Stack margin="12px 0px" spacing={2}>
+  return <Stack margin="12px 0px" spacing={1}>
     <Typography variant="h4">Hello again</Typography>
     <Stack direction="row" spacing={2} alignItems="center">
       <Typography variant="h3">I am</Typography>
