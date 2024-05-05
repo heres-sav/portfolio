@@ -4,10 +4,10 @@ import Link from "@mui/material/Link"
 import ListItem from "@mui/material/ListItem"
 import { styled } from '@mui/material/styles'
 
-const StyledLink = styled(Link)(({ heading }) => ({
+const StyledLink = styled(Link)(({ disabled }) => ({
   color: "black",
   userSelect: "none",
-  pointerEvents: heading ? "none" : "auto"
+  pointerEvents: disabled ? "none" : "auto"
 }));
 
 export const FooterItem = ({ badge, heading, href, onClick, children }) => {
@@ -22,7 +22,7 @@ export const FooterItem = ({ badge, heading, href, onClick, children }) => {
       {badge}
       <Box width="12px" />
     </>}
-    <StyledLink heading={heading} href={href} onClick={clickHandler}>
+    <StyledLink disabled={heading} href={href} onClick={clickHandler}>
       <Typography variant='body2' fontWeight={heading ? "400" : "200"} color="white">{children}</Typography>
     </StyledLink>
   </ListItem>

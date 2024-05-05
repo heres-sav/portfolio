@@ -3,8 +3,8 @@ import { styled, useTheme } from "@mui/material/styles"
 import MenuIcon from '@mui/icons-material/Menu';
 import { useRouter } from "@context"
 
-const StyledLink = styled(Link)(({ active, disabled }) => ({
-  borderRadius: active && 8,
+const StyledLink = styled(Link)(({ disabled }) => ({
+  borderRadius: 8,
   textDecoration: "none",
   userSelect: "none",
   pointerEvents: disabled ? "none" : "auto"
@@ -17,7 +17,7 @@ const Key = ({ href, children }) => {
     e.preventDefault()
     navigate(href)
   }
-  return <StyledLink active={active} disabled={active} href={href} onClick={click}>
+  return <StyledLink disabled={active} href={href} onClick={click}>
     <Typography fontWeight={active ? 600 : 400} fontFamily="Outfit" color="black">{children}</Typography>
   </StyledLink>
 }
