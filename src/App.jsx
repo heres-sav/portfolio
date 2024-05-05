@@ -1,11 +1,10 @@
 import React from 'react';
 import { CssBaseline, ThemeProvider } from "@mui/material";
-import theme from "./styles/theme";
-import { Bar } from "@layout/navigation";
-import { Route, RouterProvider, Routes } from "@common/router"
-import { Background, Margin, Header, Footer } from '@layout/body';
-import { About, Services, Work, Stories } from "@layout/sections";
-
+import { theme } from "@styles";
+import { Route, RouterProvider, Routes } from "@context"
+import { Background } from '@layout/body';
+import { About, Work, Stories, Contact } from "@screens";
+import { Footer, Header } from '@components';
 
 function App() {
   return <ThemeProvider theme={theme}>
@@ -13,16 +12,15 @@ function App() {
       <CssBaseline />
       <RouterProvider href="/">
         <Header />
-        <Bar />
         <Routes>
-          <Route path="/" element={<Margin flex={1} children={<Services />} />} />
-          <Route path="/about" element={<Margin flex={1} children={<About />} />} />
-          <Route path="/work" element={<Margin flex={1} children={<Work />} />} />
-          <Route path="/stories" element={<Margin flex={1} children={<Stories />} />} />
+          <Route path="/" element={<About />} />
+          <Route path="/work" element={<Work />} />
+          <Route path="/stories" element={<Stories />} />
+          <Route path="/contact" element={<Contact />} />
         </Routes>
-        <Footer />
       </RouterProvider>
     </Background>
+    <Footer />
   </ThemeProvider>
 }
 

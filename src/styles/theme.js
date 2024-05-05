@@ -1,6 +1,6 @@
 import { createTheme, responsiveFontSizes } from "@mui/material";
 
-const theme = createTheme({
+const themeConfig = createTheme({
   palette: {
     primary: {
       main: "#FFFFFF",
@@ -14,17 +14,17 @@ const theme = createTheme({
   }
 });
 
-theme.typography.body2 = {
+themeConfig.typography.body2 = {
   fontSize: "12px",
-  [theme.breakpoints.up('sm')]: {
+  [themeConfig.breakpoints.up('sm')]: {
     fontSize: "14px",
   },
-  [theme.breakpoints.up('md')]: {
+  [themeConfig.breakpoints.up('md')]: {
     fontSize: "1rem",
   },
-  [theme.breakpoints.up('lg')]: {
+  [themeConfig.breakpoints.up('lg')]: {
     fontSize: "1rem",
   }
 };
 
-export default responsiveFontSizes(theme);
+export const theme = responsiveFontSizes(themeConfig);

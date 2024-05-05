@@ -1,5 +1,5 @@
 import React from 'react';
-import { Typography } from "@mui/material"
+import { Box, Typography } from "@mui/material"
 import Link from "@mui/material/Link"
 import ListItem from "@mui/material/ListItem"
 import { styled } from '@mui/material/styles'
@@ -10,7 +10,7 @@ const StyledLink = styled(Link)(({ heading }) => ({
   pointerEvents: heading ? "none" : "auto"
 }));
 
-export const FooterItem = ({ heading, href, onClick, children }) => {
+export const FooterItem = ({ badge, heading, href, onClick, children }) => {
   const clickHandler = (e) => {
     if(onClick) {
       e?.preventDefault()
@@ -18,8 +18,12 @@ export const FooterItem = ({ heading, href, onClick, children }) => {
     }
   }
   return <ListItem sx={{ padding: "6px 12px" }}>
+    {badge && <>
+      {badge}
+      <Box width="12px" />
+    </>}
     <StyledLink heading={heading} href={href} onClick={clickHandler}>
-      <Typography variant='body2' fontWeight={heading ? "600" : "400"}>{children}</Typography>
+      <Typography variant='body2' fontWeight={heading ? "400" : "200"} color="white">{children}</Typography>
     </StyledLink>
   </ListItem>
 }

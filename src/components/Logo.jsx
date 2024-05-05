@@ -6,20 +6,20 @@ const Text = styled(Typography)(({ theme }) => ({
   fontWeight: "600",
   color: "white",
   userSelect: "none",
-  fontSize: "1.2rem",
+  fontSize: "1rem",
   [theme.breakpoints.up('sm')]: {
-    fontSize: "1.6rem",
+    fontSize: "1.4rem",
   },
   [theme.breakpoints.up('md')]: {
-    fontSize: "2rem",
+    fontSize: "1.6rem",
   },
   [theme.breakpoints.up('lg')]: {
-    fontSize: "2rem",
+    fontSize: "1.6rem",
   }
 }));
 
 export const Logo = () => {
-  return <Box padding="12px 12px 6px 14px" bgcolor="black" borderRadius="12px">
+  return <Box padding="6px 6px 0px 8px" bgcolor="black" borderRadius="12px">
     <Text>Sd.</Text>
   </Box>
 }
